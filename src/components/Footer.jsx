@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-4">
           <p>📞 +7 (XXX) XXX-XX-XX</p>
-          <p>✉️ your@email.ru</p>
+          <p>✉️ law.egoyan@mail.ru</p>
         </div>
         <div className="text-sm">
           <p>© 2025 ЭкоЮрист. Все права защищены.</p>
