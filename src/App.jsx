@@ -10,9 +10,17 @@ const App = () => {
     <div>
       <Header />
       <Hero />
-      <Services />
-      <About />
-      <ContactForm />
+      
+      <section id="services">
+        <Services />
+      </section>
+      <section id='about'>
+        <About />
+      </section>
+      <section id='contact'>
+        <ContactForm />
+      </section>
+      
       <Footer />
     </div>
   )
