@@ -18,9 +18,9 @@ const services = [
         description: 'Возврат денег, иски, досудебные претензии.'
   },
   {
-        icon: '🛡️',
-        title: 'Санитарно-эпидемиологическое благополучие населения',
-        description: 'Защита позиций при проведении проверок органами Роспортребнадзора'
+        icon: '🏛️',
+        title: 'Санитарно-эпидемиологическое благополучие',
+        description: 'Защита при проверках Роспотребнадзора'
   },
   {
         icon: '📝',
@@ -54,9 +54,9 @@ const Services = () => {
     }, [emblaApi])
 
     return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl font-bold text-center text-primary mb-12 font-heading">
           Мои услуги
         </h2>
 
@@ -67,14 +67,14 @@ const Services = () => {
                 key={index}
                 className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3"
               >
-                <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition h-full">
-                  <div className="text-green-600 text-4xl mb-4">
+                <div className="bg-background-card rounded-xl shadow-md p-6 hover:shadow-xl transition h-full">
+                  <div className="text-accent text-4xl mb-4">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-xl font-semibold text-primary mb-2 font-heading">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-primary-light font-body">
                     {service.description}
                   </p>
                 </div>
@@ -86,13 +86,13 @@ const Services = () => {
         <div className="flex justify-center gap-4 mt-8">
           <button
             onClick={scrollPrev}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center transition"
+            className="bg-primary-light/20 hover:bg-primary-light/30 text-primary w-10 h-10 rounded-full flex items-center justify-center transition"
           >
             ◀
           </button>
           <button
             onClick={scrollNext}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center transition"
+            className="bg-primary-light/20 hover:bg-primary-light/30 text-primary w-10 h-10 rounded-full flex items-center justify-center transition"
           >
             ▶
           </button>
