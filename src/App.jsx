@@ -1,28 +1,35 @@
-import Header from './components/Header'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from "./components/Layout"
 import Hero from './components/Hero'
 import Services from './components/Services'
 import About from './components/About'
 import ContactForm from './components/ContactForm'
-import Footer from './components/Footer'
+import Career from "./pages/Career"
+
 
 const App = () => {
   return (
-    <div className="font-body">
-      <Header />
-      <Hero />
-      
-      <section id="services">
-        <Services />
-      </section>
-      <section id='about'>
-        <About />
-      </section>
-      <section id='contact'>
-        <ContactForm />
-      </section>
-      
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={
+            <>
+              <Hero />
+              <section id="services">
+                <Services />
+              </section>
+              <section id="about">
+                <About />
+              </section>
+              <section id="contact">
+                <ContactForm />
+              </section>
+            </>
+          } />
+          <Route path="career" element={<Career />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

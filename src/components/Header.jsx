@@ -1,25 +1,49 @@
+import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   return (
     <header className="bg-primary shadow-sm sticky top-0 z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Логотип */}
-        <span className="text-2xl font-bold text-white font-heading">Юрист Егоян А.Г.</span>
+        {/* Логотип — ссылка на главную */}
+        <Link to="/" className="text-2xl font-bold text-white font-heading hover:text-accent-light transition">
+          Юрист Егоян А.Г.
+        </Link>
 
         {/* Десктопное меню */}
         <nav className="hidden md:flex space-x-6">
-          <a href="#services" className="text-white/80 hover:text-accent-light transition">
-            Услуги
-          </a>
-          <a href="#about" className="text-white/80 hover:text-accent-light transition">
-            Обо мне
-          </a>
-          <a href="#contact" className="text-white/80 hover:text-accent-light transition">
-            Контакты
-          </a>
+          {isHome ? (
+            <>
+              <a href="#services" className="text-white/80 hover:text-accent-light transition">
+                Услуги
+              </a>
+              <a href="#about" className="text-white/80 hover:text-accent-light transition">
+                Обо мне
+              </a>
+              <a href="#contact" className="text-white/80 hover:text-accent-light transition">
+                Контакты
+              </a>
+            </>
+          ) : (
+            <>
+              <Link to="/#services" className="text-white/80 hover:text-accent-light transition">
+                Услуги
+              </Link>
+              <Link to="/#about" className="text-white/80 hover:text-accent-light transition">
+                Обо мне
+              </Link>
+              <Link to="/#contact" className="text-white/80 hover:text-accent-light transition">
+                Контакты
+              </Link>
+            </>
+          )}
+          <Link to="/career" className="text-accent-light hover:text-accent border-b-2 border-accent-light transition">
+            Карьера
+          </Link>
         </nav>
 
         {/* Кнопка бургер-меню */}
@@ -41,27 +65,62 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-primary border-t border-white/10 py-4 px-4">
           <nav className="flex flex-col space-y-3">
-            <a 
-              href="#services" 
-              className="text-white/80 hover:text-accent-light transition py-2"
+            {isHome ? (
+              <>
+                <a 
+                  href="#services" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Услуги
+                </a>
+                <a 
+                  href="#about" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Обо мне
+                </a>
+                <a 
+                  href="#contact" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Контакты
+                </a>
+              </>
+            ) : (
+              <>
+                <Link 
+                  to="/#services" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Услуги
+                </Link>
+                <Link 
+                  to="/#about" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Обо мне
+                </Link>
+                <Link 
+                  to="/#contact" 
+                  className="text-white/80 hover:text-accent-light transition py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Контакты
+                </Link>
+              </>
+            )}
+            <Link 
+              to="/career" 
+              className="text-accent-light hover:text-accent transition py-2"
               onClick={() => setIsOpen(false)}
             >
-              Услуги
-            </a>
-            <a 
-              href="#about" 
-              className="text-white/80 hover:text-accent-light transition py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Обо мне
-            </a>
-            <a 
-              href="#contact" 
-              className="text-white/80 hover:text-accent-light transition py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Контакты
-            </a>
+              Карьера
+            </Link>
           </nav>
         </div>
       )}

@@ -3,7 +3,7 @@ import heroBg from "../assets/IMG_0587.webp"
 const Hero = () => {
   return (
     <div 
-      className="relative text-white min-h-screen flex items-center"
+      className="relative text-white min-h-screen flex items-start pt-32 md:pt-40 lg:pt-48"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(7,23,57,0.85) 0%, rgba(7,23,57,0.4) 50%, rgba(166,136,104,0.15) 100%), url(${heroBg})`,
         backgroundSize: 'cover',
