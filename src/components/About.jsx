@@ -19,21 +19,39 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-2">
             Арутюн Егоян
           </h2>
+
+<div className="flex items-center gap-4 mb-4">
+  <div className="h-px flex-1 bg-accent/30"></div>
+  <span className="text-[10px] uppercase tracking-[0.2em] text-accent/40 font-light italic">
+    Lex rex
+  </span>
+  <div className="h-px flex-1 bg-accent/30"></div>
+</div>
+
           <p className="text-xl md:text-2xl text-accent-light font-medium mb-4">
-            Юрист с 10-летним стажем
+            Юрист с практическим опытом в системе
           </p>
-          <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8">
-            Моя карьера началась в судебной системе, затем я работал в полиции, 
-            Роспотребнадзоре и Департаменте природопользования. Я знаю, как устроена 
-            система контроля изнутри. Моя задача — не просто знать законы, а защищать 
-            вас от них, когда это необходимо.
-          </p>
+          
+          {/* Цитата */}
+          <div className="relative mb-8 pl-4 md:pl-6 border-l-4 border-accent/50">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed font-light italic">
+              "Более 10 лет я работал в судебной системе, правоохранительных и надзорных органах.
+              <br /><br />
+              Я понимаю, как формируются проверки, решения и штрафы — не из теории, а из практики.
+              <br /><br />
+              На сегодняшний день я использую этот опыт, чтобы помочь бизнесу и гражданам защитить свои права, оспаривать штрафы и выстроить позицию в сложных правовых спорах."
+            </p>
+            {/* Кавычка в углу */}
+            <div className="absolute -top-2 -left-2 text-accent/10 font-serif text-7xl leading-none">
+              "
+            </div>
+          </div>
           
           {/* Цифры */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             <div>
               <span className="block text-3xl md:text-4xl font-bold font-heading text-accent">10+</span>
-              <span className="block mt-1 text-white/70 text-sm">лет опыта</span>
+              <span className="block mt-1 text-white/70 text-sm">лет практики</span>
             </div>
             <div>
               <span className="block text-3xl md:text-4xl font-bold font-heading text-accent">5+</span>
@@ -41,7 +59,7 @@ const About = () => {
             </div>
             <div>
               <span className="block text-3xl md:text-4xl font-bold font-heading text-accent">300+</span>
-              <span className="block mt-1 text-white/70 text-sm">договоров ДДУ</span>
+              <span className="block mt-1 text-white/70 text-sm">успешных кейсов</span>
             </div>
             <div>
               <span className="block text-3xl md:text-4xl font-bold font-heading text-accent">500+</span>

@@ -1,187 +1,475 @@
-const services = [
+const businessServices = [
   {
-    icon: '⚖️',
-    title: 'Штрафы и КоАП',
-    description: 'Обжалование постановлений, защита в суде, снижение сумм штрафов.',
+    icon: "🏛️",
+    title: "Проверки государственных органов",
+    description:
+      "Помогаю подготовиться к проверкам, сопровождаю контрольные мероприятия и защищаю интересы бизнеса при взаимодействии с надзорными органами.",
+
     details: [
-      'Обжалование постановлений о штрафах',
-      'Защита в суде по делам об административных правонарушениях',
-      'Снижение сумм штрафов',
-      'Споры с ГИБДД, Роспотребнадзором и другими органами',
+      "Подготовка к проверкам",
+      "Сопровождение контрольных и профилактических мероприятий (248-ФЗ)",
+      "Подготовка возражений на акты и предписания",
+      "Взаимодействие с контролирующими органами",
+      "Правовой анализ действий должностных лиц",
     ],
   },
+
   {
-    icon: '🌿',
-    title: 'Экологические нарушения',
-    description: 'Защита при проверках Росприроднадзора, споры об ущербе.',
+    icon: "⚖️",
+    title: "Административные дела и штрафы",
+    description:
+      "Защита бизнеса при привлечении к административной ответственности и обжалование решений государственных органов.",
+
     details: [
-      'Защита при проверках Росприроднадзора',
-      'Споры о возмещении экологического ущерба',
-      'Обжалование предписаний',
-      'Сопровождение при административных расследованиях',
+      "Анализ материалов административного дела",
+      "Подготовка жалоб и процессуальных документов",
+      "Защита по делам об административных правонарушениях",
+      "Обжалование постановлений",
+      "Представление интересов в суде",
     ],
   },
+
   {
-    icon: '🛡️',
-    title: 'Защита прав потребителей',
-    description: 'Возврат денег, иски, досудебные претензии.',
+    icon: "🌿",
+    title: "Экологическое законодательство",
+    description:
+      "Правовая помощь организациям и предпринимателям в вопросах государственного экологического контроля.",
+
     details: [
-      'Досудебные претензии к продавцам',
-      'Иски о защите прав потребителей',
-      'Возврат товаров ненадлежащего качества',
-      'Взыскание неустоек и морального вреда',
+      "Экологический надзор",
+      "Обжалование предписаний",
+      "Защита при административных расследованиях",
+      "Споры о возмещении экологического вреда",
+      "Консультации по природоохранному законодательству",
     ],
   },
+
   {
-    icon: '🏛️',
-    title: 'Санитарно-эпидемиологический надзор',
-    description: 'Защита при проверках Роспотребнадзора, оспаривание предписаний.',
+    icon: "📄",
+    title: "Правовая поддержка бизнеса",
+    description:
+      "Правовой анализ ситуаций, подготовка документов и сопровождение взаимодействия бизнеса с государственными органами.",
+
     details: [
-      'Сопровождение проверок Роспотребнадзора',
-      'Оспаривание предписаний',
-      'Защита при административных расследованиях',
-      'Консультации по санитарному законодательству',
-    ],
-  },
-  {
-    icon: '📝',
-    title: 'Консультации онлайн',
-    description: 'Письменные и устные консультации по любым правовым вопросам.',
-    details: [
-      'Устные и письменные консультации',
-      'Правовой анализ документов',
-      'Подготовка правовых заключений',
-      'Консультации по телефону и в мессенджерах',
-    ],
-  },
-  {
-    icon: '🏢',
-    title: 'Представительство в суде',
-    description: 'Полное ведение дела от подготовки иска до получения решения.',
-    details: [
-      'Подготовка исковых заявлений',
-      'Представительство в судах всех инстанций',
-      'Обжалование судебных решений',
-      'Ведение дела "под ключ"',
+      "Правовой анализ документов",
+      "Подготовка исков, жалоб и обращений",
+      "Подготовка правовых заключений",
+      "Представительство в суде",
+      "Комплексное сопровождение ситуации",
     ],
   },
 ]
 
+
+const citizenServices = [
+  {
+    icon: "🛡️",
+    title: "Защита прав потребителей",
+    description:
+      "Помощь гражданам при нарушении прав продавцами, организациями и исполнителями услуг.",
+
+    details: [
+      "Анализ ситуации",
+      "Подготовка претензий",
+      "Обращения в контролирующие органы",
+      "Подготовка исковых заявлений",
+      "Представительство в суде",
+    ],
+  },
+
+  {
+    icon: "⚖️",
+    title: "Судебная защита",
+    description:
+      "Подготовка правовой позиции и документов для защиты ваших интересов в суде.",
+
+    details: [
+      "Правовой анализ ситуации",
+      "Подготовка исков и возражений",
+      "Подготовка жалоб",
+      "Представительство в суде",
+      "Сопровождение судебного дела",
+    ],
+  },
+
+  {
+  icon: "📄",
+  title: "Жалобы, заявления и обращения",
+  description:
+    "Помощь в подготовке юридически грамотных обращений в государственные органы, управляющие компании и организации.",
+
+  details: [
+    "Подготовка жалоб и заявлений",
+    "Обращения в контролирующие органы",
+    "Ответы на обращения организаций",
+    "Жалобы в управляющие компании",
+    "Правовой анализ ситуации и документов",
+  ],
+},
+
+]
+
+
+const ServiceCards = ({ services }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+      {services.map((service, index) => (
+
+        <div
+          key={index}
+          className="group relative rounded-2xl bg-background-card border border-black/5
+                     shadow-sm hover:shadow-xl transition-all duration-500
+                     p-7 overflow-hidden hover:-translate-y-1"
+        >
+
+          <div className="text-4xl mb-5">
+            {service.icon}
+          </div>
+
+
+          <h3 className="text-xl font-semibold text-primary mb-3">
+            {service.title}
+          </h3>
+
+
+          <p className="text-primary-light leading-relaxed mb-6">
+            {service.description}
+          </p>
+
+
+          <div className="border-t border-black/5 pt-5">
+
+            <ul className="space-y-3">
+
+              {service.details.map((detail, idx) => (
+
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 text-sm text-primary-light"
+                >
+
+                  <span className="text-accent mt-[2px]">
+                    ●
+                  </span>
+
+                  <span>
+                    {detail}
+                  </span>
+
+                </li>
+
+              ))}
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+  )
+}
+
+
+
 const Services = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center py-16 md:py-24">
+    <section className="min-h-screen bg-background py-20">
+
       <div className="container mx-auto px-4">
-        
-        {/* Заголовок */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-primary">
-            Мои услуги
+
+
+        <div className="text-center max-w-3xl mx-auto mb-14">
+
+          <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary">
+            В каких вопросах я могу помочь
           </h2>
-          <div className="w-20 h-1 bg-accent rounded-full mx-auto mt-3 mb-4"></div>
-          <p className="text-primary-light text-lg max-w-2xl mx-auto">
-            Помогаю бизнесу и гражданам в спорах с государством
+
+
+          <div className="w-20 h-1 bg-accent rounded-full mx-auto mt-4 mb-6"></div>
+
+
+          <p className="text-lg text-primary-light leading-relaxed">
+            Основное направление моей практики — защита бизнеса и граждан
+            при взаимодействии с государственными органами,
+            сопровождение проверок, административные дела
+            и судебная защита.
           </p>
+
         </div>
-        
-        {/* Сетка услуг */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative rounded-2xl bg-background-card border border-black/5
-                         shadow-sm hover:shadow-xl
-                         transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-                         p-6 cursor-pointer overflow-visible
-                         hover:-translate-y-1 hover:scale-[1.01]
-                         hover:z-20"
-            >
-              {/* subtle glow border like Apple UI */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100
-                              transition-opacity duration-500
-                              bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
 
-              {/* Индикатор интерактивности — пульсирующая точка */}
-              <div className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full bg-accent/30 group-hover:bg-accent/70 transition-colors duration-300 animate-pulse" />
 
-              {/* ICON */}
-              <div className="text-4xl mb-4 transition-transform duration-500 group-hover:-translate-y-0.5">
-                {service.icon}
-              </div>
 
-              {/* TITLE */}
-              <h3 className="text-xl font-semibold text-primary mb-2 tracking-tight">
-                {service.title}
-              </h3>
+        {/* Бизнес */}
 
-              {/* DESCRIPTION */}
-              <p className="text-primary-light text-sm leading-relaxed transition-opacity duration-300 group-hover:opacity-70">
-                {service.description}
-              </p>
+        <div className="mb-20">
 
-              {/* Текст-подсказка */}
-              <p className="text-[10px] uppercase tracking-wider text-primary-light/30 group-hover:text-primary-light/60 transition-colors duration-300 mt-4">
-                Наведите для деталей
-              </p>
+          <h3 className="text-3xl md:text-4xl font-bold font-heading text-primary text-center mb-10">
+            Для бизнеса
+          </h3>
 
-              {/* Стрелка-подсказка */}
-              <div className="absolute bottom-4 right-4 text-accent/20 group-hover:text-accent transition-all duration-300 group-hover:translate-x-0.5">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
+          <ServiceCards services={businessServices}/>
 
-              {/* APPLE-STYLE FLOATING PANEL */}
-              <div
-                className="absolute left-1/2 -translate-x-1/2 top-0 w-[110%] max-h-[450px] min-h-full rounded-2xl
-                           bg-background-card/95 backdrop-blur-xl
-                           border border-black/10 shadow-2xl
-                           p-6
-                           opacity-0 invisible translate-y-3 scale-[0.98]
-                           group-hover:opacity-100 group-hover:visible
-                           group-hover:translate-y-0 group-hover:scale-100
-                           transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-                           z-50 overflow-y-auto"
-              >
-                {/* top icon + title */}
-                <div className="mb-4">
-                  <div className="text-3xl mb-2 transition-transform duration-500 group-hover:scale-105">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-primary tracking-tight">
-                    {service.title}
-                  </h3>
-                </div>
-
-                {/* details */}
-                <ul className="space-y-2 border-t border-black/5 pt-4">
-                  {service.details.map((detail, idx) => (
-                    <li key={idx} className="text-sm text-primary-light flex gap-2">
-                      <span className="text-accent text-[10px] mt-[6px]">●</span>
-                      <span className="leading-relaxed">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
         </div>
-        
-        {/* Призыв к действию */}
-        <div className="text-center mt-12 min-h-[100px] flex flex-col items-center justify-center">
-          <p className="text-primary-light mb-4">
-            Не нашли нужную услугу? Свяжитесь со мной, и я помогу
+
+
+
+        {/* Граждане */}
+
+        <div className="mb-20">
+
+          <h3 className="text-3xl md:text-4xl font-bold font-heading text-primary text-center mb-10">
+            Для граждан
+          </h3>
+
+          <ServiceCards services={citizenServices}/>
+
+        </div>
+
+
+
+        {/* CTA */}
+
+        <div className="text-center mt-20 max-w-2xl mx-auto">
+
+          <h3 className="text-2xl font-semibold text-primary mb-4">
+            Не уверены, относится ли ваш вопрос к моей практике?
+          </h3>
+
+
+          <p className="text-primary-light mb-8 leading-relaxed">
+            Опишите ситуацию — я оценю её с правовой точки зрения,
+            расскажу о возможных вариантах действий и, при необходимости,
+            предложу дальнейшее сопровождение.
           </p>
+
+
           <a
             href="#contact"
-            className="inline-block bg-accent hover:bg-accent-light text-white font-medium px-8 py-3 rounded-lg transition-all duration-300"
+            className="inline-block bg-accent hover:bg-accent-light
+                       text-white px-8 py-3 rounded-lg
+                       transition duration-300"
           >
-            Связаться со мной
+            Получить консультацию
           </a>
+
         </div>
-        
+
+
       </div>
+
     </section>
   )
 }
 
+
 export default Services
+
+
+// const services = [
+//   {
+//     icon: "🏛️",
+//     title: "Проверки государственных органов",
+//     description:
+//       "Помогаю подготовиться к проверке, сопровождаю контрольные мероприятия и защищаю интересы при взаимодействии с надзорными органами.",
+
+//     details: [
+//       "Подготовка к проверкам",
+//       "Сопровождение контрольных и профилактических мероприятий (248-ФЗ)",
+//       "Подготовка возражений на акты и предписания",
+//       "Взаимодействие с контролирующими органами",
+//       "Правовой анализ действий должностных лиц",
+//     ],
+//   },
+
+//   {
+//     icon: "⚖️",
+//     title: "Административные дела и штрафы",
+//     description:
+//       "Защита интересов по делам об административных правонарушениях и обжалование решений государственных органов.",
+
+//     details: [
+//       "Анализ материалов административного дела",
+//       "Подготовка жалоб и процессуальных документов",
+//       "Защита по делам об административных правонарушениях",
+//       "Обжалование постановлений",
+//       "Представление интересов в суде",
+//     ],
+//   },
+
+//   {
+//     icon: "🛡️",
+//     title: "Роспотребнадзор и защита прав потребителей",
+//     description:
+//       "Практический опыт работы в Роспотребнадзоре помогает эффективно защищать интересы как бизнеса, так и граждан.",
+
+//     details: [
+//       "Сопровождение проверок",
+//       "Оспаривание предписаний",
+//       "Подготовка исков и претензий",
+//       "Консультации по законодательству о защите прав потребителей",
+//       "Представление интересов в суде",
+//     ],
+//   },
+
+//   {
+//     icon: "🌿",
+//     title: "Экологическое законодательство",
+//     description:
+//       "Правовая помощь организациям и предпринимателям в вопросах государственного экологического контроля.",
+
+//     details: [
+//       "Экологический надзор",
+//       "Обжалование предписаний",
+//       "Защита при административных расследованиях",
+//       "Споры о возмещении экологического вреда",
+//       "Консультации по природоохранному законодательству",
+//     ],
+//   },
+
+//   {
+//     icon: "📄",
+//     title: "Правовой анализ и судебная защита",
+//     description:
+//       "Подготовка правовой позиции, процессуальных документов и сопровождение судебных споров.",
+
+//     details: [
+//       "Правовой анализ ситуации",
+//       "Подготовка исков, отзывов и жалоб",
+//       "Подготовка правовых заключений",
+//       "Представительство в суде",
+//       "Комплексное сопровождение дела",
+//     ],
+//   },
+// ]
+
+// const Services = () => {
+//   return (
+//     <section className="min-h-screen bg-background py-20">
+
+//       <div className="container mx-auto px-4">
+
+//         {/* Заголовок */}
+
+//         <div className="text-center max-w-3xl mx-auto mb-14">
+
+//           <h2 className="text-4xl md:text-5xl font-bold font-heading text-primary">
+
+//             В каких вопросах я могу помочь
+
+//           </h2>
+
+//           <div className="w-20 h-1 bg-accent rounded-full mx-auto mt-4 mb-6"></div>
+
+//           <p className="text-lg text-primary-light leading-relaxed">
+
+//             Основное направление моей практики — защита бизнеса и граждан
+//             при взаимодействии с государственными органами,
+//             сопровождение проверок, административные дела
+//             и судебная защита.
+
+//           </p>
+
+//         </div>
+
+//         {/* Карточки */}
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+//           {services.map((service, index) => (
+
+//             <div
+//               key={index}
+//               className="group relative rounded-2xl bg-background-card border border-black/5
+//                          shadow-sm hover:shadow-xl transition-all duration-500
+//                          p-7 overflow-hidden hover:-translate-y-1"
+//             >
+
+//               <div className="text-4xl mb-5">
+
+//                 {service.icon}
+
+//               </div>
+
+//               <h3 className="text-xl font-semibold text-primary mb-3">
+
+//                 {service.title}
+
+//               </h3>
+
+//               <p className="text-primary-light leading-relaxed mb-6">
+
+//                 {service.description}
+
+//               </p>
+
+//               <div className="border-t border-black/5 pt-5">
+
+//                 <ul className="space-y-3">
+
+//                   {service.details.map((detail, idx) => (
+
+//                     <li
+//                       key={idx}
+//                       className="flex items-start gap-3 text-sm text-primary-light"
+//                     >
+
+//                       <span className="text-accent mt-[2px]">●</span>
+
+//                       <span>{detail}</span>
+
+//                     </li>
+
+//                   ))}
+
+//                 </ul>
+
+//               </div>
+
+//             </div>
+
+//           ))}
+
+//         </div>
+
+//         {/* CTA */}
+
+//         <div className="text-center mt-20 max-w-2xl mx-auto">
+
+//           <h3 className="text-2xl font-semibold text-primary mb-4">
+
+//             Не уверены, относится ли ваш вопрос к моей практике?
+
+//           </h3>
+
+//           <p className="text-primary-light mb-8 leading-relaxed">
+
+//             Опишите ситуацию — я оценю её с правовой точки зрения,
+//             расскажу о возможных вариантах действий и, при необходимости,
+//             предложу дальнейшее сопровождение.
+
+//           </p>
+
+//           <a
+//             href="#contact"
+//             className="inline-block bg-accent hover:bg-accent-light
+//                        text-white px-8 py-3 rounded-lg
+//                        transition duration-300"
+//           >
+
+//             Получить консультацию
+
+//           </a>
+
+//         </div>
+
+//       </div>
+
+//     </section>
+//   )
+// }
+
+// export default Services

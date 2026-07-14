@@ -5,6 +5,8 @@ import Services from './components/Services'
 import About from './components/About'
 import ContactForm from './components/ContactForm'
 import Career from "./pages/Career"
+import Business from "./pages/Business"
+import Citizens from "./pages/Citizens"
 
 
 const App = () => {
@@ -27,6 +29,11 @@ const App = () => {
             </>
           } />
           <Route path="career" element={<Career />} />
+
+          <Route path="business" element={<Business />} />
+
+          <Route path="citizens" element={<Citizens />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
