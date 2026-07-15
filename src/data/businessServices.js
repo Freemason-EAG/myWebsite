@@ -3,6 +3,8 @@ const businessServices = [
   {
     icon: "🏥",
     title: "Проверки Роспотребнадзора",
+    link: "/business/rospotrebnadzor",
+    slug: "rospotrebnadzor",
     description:
       "Помощь бизнесу при проверках Роспотребнадзора: подготовка, сопровождение контрольных мероприятий и защита интересов организации.",
 
@@ -19,6 +21,8 @@ const businessServices = [
   {
     icon: "🏛️",
     title: "Проверки государственных органов",
+    link: "/business/government-checks",
+    slug: "government-checks",
     description:
       "Защита бизнеса при взаимодействии с контролирующими органами и сопровождение мероприятий государственного контроля.",
 
@@ -35,6 +39,8 @@ const businessServices = [
   {
     icon: "🚫",
     title: "Штрафы и риск приостановления деятельности",
+    link: "/business/fines-and-suspension",
+    slug: "fines",
     description:
       "Защита бизнеса по административным делам, связанным со штрафами, предписаниями и возможным ограничением деятельности.",
 
@@ -51,6 +57,8 @@ const businessServices = [
   {
     icon: "🌿",
     title: "Экологический контроль и природоохранное законодательство",
+    link: "/business/ecology",
+    slug: "ecology",
     description:
       "Юридическая помощь организациям и предпринимателям при экологических проверках и требованиях контролирующих органов.",
 
@@ -67,6 +75,8 @@ const businessServices = [
   {
     icon: "📄",
     title: "Юридическое сопровождение бизнеса",
+    link: "/business/support",
+    slug: "legal-support",
     description:
       "Комплексная юридическая помощь предпринимателям и организациям по текущим правовым вопросам.",
 

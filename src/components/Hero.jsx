@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6">
 
-        <div className="max-w-3xl">
+        <div className="max-w-3xl -translate-y-8 md:-translate-y-12">
 
           {/* Имя */}
 
@@ -84,61 +84,49 @@ const Hero = () => {
           </div>
 
 
- {/* Выбор направления */}
+          {/* Выбор направления */}
 
-<div className="mt-8">
+          <div className="mt-8">
 
-  <p className="text-white/70 mb-4 text-lg">
-    Выберите направление помощи:
-  </p>
+            <p className="text-white/70 mb-4 text-lg">
 
+              Выберите направление помощи:
 
-  <div className="flex flex-wrap gap-4">
-
-
-    <Link
-      to="/business"
-      className="border border-accent text-accent
-                 px-6 py-3 rounded-lg
-                 transition-all duration-300
-                 hover:bg-accent hover:text-white"
-    >
-      Для бизнеса
-    </Link>
+            </p>
 
 
-    <Link
-      to="/citizens"
-      className="border border-white/30 text-white
-                 px-6 py-3 rounded-lg
-                 transition-all duration-300
-                 hover:bg-white hover:text-primary"
-    >
-      Для граждан
-    </Link>
+            <div className="flex flex-wrap gap-4">
 
 
-  </div>
+              <Link
+                to="/business"
+                className="border border-accent text-accent
+                           px-6 py-3 rounded-lg
+                           transition-all duration-300
+                           hover:bg-accent hover:text-white"
+              >
 
-</div>
+                Для бизнеса
 
-         {/* Основная кнопка
+              </Link>
 
-          <div className="mt-10">
 
-            <a
-              href="#contact"
-              className="inline-block bg-accent hover:bg-accent-light
-                         text-white px-8 py-4 rounded-lg
-                         transition-all duration-300
-                         shadow-xl text-lg font-medium"
-            >
+              <Link
+                to="/citizens"
+                className="border border-white/30 text-white
+                           px-6 py-3 rounded-lg
+                           transition-all duration-300
+                           hover:bg-white hover:text-primary"
+              >
 
-              Обсудить ситуацию
+                Для граждан
 
-            </a>
+              </Link>
 
-          </div> */}
+
+            </div>
+
+          </div>
 
 
         </div>
@@ -152,6 +140,7 @@ export default Hero
 
 
 // import heroBg from "../assets/IMG_0587.webp"
+// import { Link } from "react-router-dom"
 
 // const Hero = () => {
 //   return (
@@ -175,6 +164,7 @@ export default Hero
 
 //           </p>
 
+
 //           {/* Заголовок */}
 
 //           <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-8">
@@ -192,6 +182,7 @@ export default Hero
 
 //           </h1>
 
+
 //           {/* Основной текст */}
 
 //           <p className="text-xl md:text-2xl text-white/85 leading-relaxed max-w-2xl">
@@ -202,6 +193,7 @@ export default Hero
 //             и правовой анализ сложных ситуаций.
 
 //           </p>
+
 
 //           {/* Опыт */}
 
@@ -220,6 +212,7 @@ export default Hero
 
 //             </p>
 
+
 //             <p className="text-white/70 mt-3">
 
 //               Этот опыт позволяет понимать,
@@ -231,7 +224,46 @@ export default Hero
 
 //           </div>
 
-//           {/* Кнопка */}
+
+//  {/* Выбор направления */}
+
+// <div className="mt-8">
+
+//   <p className="text-white/70 mb-4 text-lg">
+//     Выберите направление помощи:
+//   </p>
+
+
+//   <div className="flex flex-wrap gap-4">
+
+
+//     <Link
+//       to="/business"
+//       className="border border-accent text-accent
+//                  px-6 py-3 rounded-lg
+//                  transition-all duration-300
+//                  hover:bg-accent hover:text-white"
+//     >
+//       Для бизнеса
+//     </Link>
+
+
+//     <Link
+//       to="/citizens"
+//       className="border border-white/30 text-white
+//                  px-6 py-3 rounded-lg
+//                  transition-all duration-300
+//                  hover:bg-white hover:text-primary"
+//     >
+//       Для граждан
+//     </Link>
+
+
+//   </div>
+
+// </div>
+
+//          {/* Основная кнопка
 
 //           <div className="mt-10">
 
@@ -247,49 +279,8 @@ export default Hero
 
 //             </a>
 
-//           </div>
-
-//           {/* Нижние факты */}
-
-//           {/* <div className="mt-14 flex flex-wrap gap-8 text-sm text-white/70">
-
-//             <div>
-
-//               <span className="block text-3xl font-heading text-accent">
-
-//                 10+
-
-//               </span>
-
-//               лет юридической практики
-
-//             </div>
-
-//             <div>
-
-//               <span className="block text-3xl font-heading text-accent">
-
-//                 5+
-
-//               </span>
-
-//               лет в надзорных органах
-
-//             </div>
-
-//             <div>
-
-//               <span className="block text-3xl font-heading text-accent">
-
-//                 300+
-
-//               </span>
-
-//               сопровождённых договоров
-
-//             </div>
-
 //           </div> */}
+
 
 //         </div>
 
@@ -299,4 +290,5 @@ export default Hero
 // }
 
 // export default Hero
+
 

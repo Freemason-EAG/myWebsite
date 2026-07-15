@@ -1,5 +1,6 @@
 import businessServices from "../data/businessServices"
 import WorkSteps from "../components/WorkSteps"
+import { Link } from "react-router-dom"
 
 
 const Business = () => {
@@ -81,22 +82,29 @@ const Business = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
 
-          {businessServices.map((service,index)=>(
+        {businessServices.map((service,index)=>(
 
 
-            <div
-              key={index}
-              className="
+          <Link
+
+            key={index}
+
+            to={service.link}
+
+            className="
+              group
+              block
               bg-background-card 
               rounded-2xl 
               shadow-sm 
               p-7
               border border-black/5
               hover:shadow-xl
+              hover:-translate-y-1
               transition-all
               duration-300
-              "
-            >
+            "
+  >
 
 
               <div className="text-4xl mb-5">
@@ -106,7 +114,7 @@ const Business = () => {
               </div>
 
 
-              <h2 className="text-xl font-semibold text-primary mb-3">
+              <h2 className="text-xl font-semibold text-primary mb-3 group-hover:text-accent transition">
 
                 {service.title}
 
@@ -151,7 +159,7 @@ const Business = () => {
               </ul>
 
 
-            </div>
+            </Link>
 
 
           ))}

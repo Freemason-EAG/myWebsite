@@ -8,6 +8,7 @@ import Career from "./pages/Career"
 import Business from "./pages/Business"
 import Citizens from "./pages/Citizens"
 import FloatingContactButton from "./components/FloatingContactButton"
+import ServicePage from "./pages/ServicePage"
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
               <section id="services">
                 <Services />
               </section>
+              
               <section id="about">
                 <About />
               </section>
@@ -32,6 +34,11 @@ const App = () => {
           <Route path="career" element={<Career />} />
 
           <Route path="business" element={<Business />} />
+
+          <Route 
+            path="business/:slug" 
+            element={<ServicePage />} 
+          />
 
           <Route path="citizens" element={<Citizens />} />
           
