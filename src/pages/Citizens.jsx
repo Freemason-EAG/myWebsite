@@ -1,4 +1,5 @@
 import citizenServices from "../data/citizenServices"
+import WorkSteps from "../components/WorkSteps"
 
 
 const Citizens = () => {
@@ -160,7 +161,362 @@ const Citizens = () => {
 
         </div>
 
+                {/* Какие ситуации я помогаю решить */}
 
+        <div className="max-w-5xl mx-auto mt-20 mb-10">
+
+
+          <div className="text-center mb-10">
+
+
+            <h2 className="
+              text-3xl
+              md:text-4xl
+              font-heading
+              font-bold
+              text-primary
+            ">
+
+              Какие ситуации я помогаю решить
+
+            </h2>
+
+
+            <div className="
+              w-20
+              h-1
+              bg-accent
+              rounded-full
+              mx-auto
+              mt-5
+            "></div>
+
+
+          </div>
+
+
+
+          <div className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            gap-5
+          ">
+
+
+            {[
+              "Нарушены ваши права как потребителя",
+              "Необходимо вернуть деньги за товар или услугу",
+              "Продавец или организация отказываются выполнять свои обязательства",
+              "Управляющая компания бездействует или нарушает ваши права",
+              "Необходимо подготовить жалобу или обращение в государственный орган",
+              "Требуется составить претензию, заявление или иск",
+              "Возник спор с организацией или государственным учреждением",
+              "Не знаете, куда обратиться и какие действия предпринять",
+            ].map((item, index) => (
+
+              <div
+                key={index}
+                className="
+                  flex
+                  items-start
+                  gap-3
+                  bg-background-card
+                  rounded-xl
+                  p-5
+                  border border-black/5
+                  shadow-sm
+                "
+              >
+
+                <span className="text-accent text-lg mt-1">
+                  ●
+                </span>
+
+
+                <p className="
+                  text-primary-light
+                  leading-relaxed
+                ">
+
+                  {item}
+
+                </p>
+
+
+              </div>
+
+
+            ))}
+
+
+          </div>
+
+
+
+          <p className="
+            text-center
+            text-primary-light
+            mt-8
+            text-lg
+          ">
+
+            И многое другое — если вы столкнулись с юридической проблемой,
+            но не знаете, как правильно действовать,
+            я помогу определить возможные варианты решения.
+
+          </p>
+
+
+
+        </div>
+
+          <WorkSteps type="citizens" />
+
+                {/* Мой опыт — ваше преимущество */}
+
+        <div className="
+          bg-primary
+          text-white
+          rounded-2xl
+          p-8
+          md:p-10
+          mt-20
+          shadow-xl
+        ">
+
+
+          <h2 className="
+            text-2xl
+            md:text-3xl
+            font-heading
+            font-bold
+            mb-5
+          ">
+
+            Мой опыт — ваше преимущество!
+
+          </h2>
+
+
+
+          <p className="
+            text-white/80
+            leading-relaxed
+            text-lg
+          ">
+
+            Я понимаю, как работают государственные органы,
+            какие аргументы имеют значение при рассмотрении обращений
+            и какие документы действительно помогают защитить права граждан.
+
+          </p>
+
+
+
+          <p className="
+            text-accent-light
+            leading-relaxed
+            text-lg
+            mt-5
+          ">
+
+            Вы получаете не просто подготовленный документ,
+            а продуманную правовую позицию с пониманием дальнейших действий.
+
+          </p>
+
+
+        </div>
+
+                {/* Когда стоит обратиться */}
+
+        <div className="max-w-5xl mx-auto mt-20 mb-20">
+
+
+          <div className="text-center mb-10">
+
+
+            <h2 className="
+              text-3xl
+              md:text-4xl
+              font-heading
+              font-bold
+              text-primary
+            ">
+
+              Когда стоит обратиться за юридической помощью
+
+            </h2>
+
+
+            <div className="
+              w-20
+              h-1
+              bg-accent
+              rounded-full
+              mx-auto
+              mt-5
+            "></div>
+
+
+          </div>
+
+
+
+
+          <div className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            gap-6
+          ">
+
+
+            <div className="
+              bg-background-card
+              rounded-2xl
+              p-7
+              border border-black/5
+              shadow-sm
+            ">
+
+              <h3 className="
+                text-xl
+                font-semibold
+                text-primary
+                mb-4
+              ">
+
+                Нарушены ваши права
+
+              </h3>
+
+
+              <p className="text-primary-light leading-relaxed">
+
+                Если организация, продавец, исполнитель услуги
+                или государственный орган нарушили ваши права —
+                важно правильно оценить ситуацию и выбрать способ защиты.
+
+              </p>
+
+
+            </div>
+
+
+
+
+            <div className="
+              bg-background-card
+              rounded-2xl
+              p-7
+              border border-black/5
+              shadow-sm
+            ">
+
+
+              <h3 className="
+                text-xl
+                font-semibold
+                text-primary
+                mb-4
+              ">
+
+                Не знаете, куда обращаться
+
+              </h3>
+
+
+              <p className="text-primary-light leading-relaxed">
+
+                Часто проблема заключается не в отсутствии прав,
+                а в неправильном выборе органа или способа обращения.
+                Помогу определить правильный порядок действий.
+
+              </p>
+
+
+            </div>
+
+
+
+
+
+            <div className="
+              bg-background-card
+              rounded-2xl
+              p-7
+              border border-black/5
+              shadow-sm
+            ">
+
+
+              <h3 className="
+                text-xl
+                font-semibold
+                text-primary
+                mb-4
+              ">
+
+                Нужно подготовить документы
+
+              </h3>
+
+
+              <p className="text-primary-light leading-relaxed">
+
+                Грамотно составленные претензии, жалобы,
+                заявления и исковые документы значительно повышают
+                эффективность защиты ваших интересов.
+
+              </p>
+
+
+            </div>
+
+
+
+
+
+            <div className="
+              bg-background-card
+              rounded-2xl
+              p-7
+              border border-black/5
+              shadow-sm
+            ">
+
+
+              <h3 className="
+                text-xl
+                font-semibold
+                text-primary
+                mb-4
+              ">
+
+                Возник спор
+
+              </h3>
+
+
+              <p className="text-primary-light leading-relaxed">
+
+                Если переговоры не помогли — необходимо подготовить
+                правовую позицию и защищать свои интересы
+                в государственных органах или суде.
+
+              </p>
+
+
+            </div>
+
+
+
+          </div>
+
+
+        </div>
 
 
         {/* CTA */}

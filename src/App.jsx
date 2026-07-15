@@ -7,6 +7,7 @@ import ContactForm from './components/ContactForm'
 import Career from "./pages/Career"
 import Business from "./pages/Business"
 import Citizens from "./pages/Citizens"
+import FloatingContactButton from "./components/FloatingContactButton"
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           
         </Route>
       </Routes>
+      <FloatingContactButton />
     </BrowserRouter>
   )
 }
