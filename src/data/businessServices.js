@@ -39,7 +39,7 @@ const businessServices = [
   {
     icon: "🚫",
     title: "Штрафы и риск приостановления деятельности",
-    link: "/business/fines-and-suspension",
+    link: "/business/fines",
     slug: "fines",
     description:
       "Защита бизнеса по административным делам, связанным со штрафами, предписаниями и возможным ограничением деятельности.",
@@ -75,7 +75,7 @@ const businessServices = [
   {
     icon: "📄",
     title: "Юридическое сопровождение бизнеса",
-    link: "/business/support",
+    link: "/business/legal-support",
     slug: "legal-support",
     description:
       "Комплексная юридическая помощь предпринимателям и организациям по текущим правовым вопросам.",
