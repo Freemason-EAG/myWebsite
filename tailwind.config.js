@@ -4,29 +4,55 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
+
       colors: {
         primary: {
-          DEFAULT: '#071739',    // основной текст, заголовки, темный фон
-          light: '#4B6382',      // подзаголовки, втор. текст
+          DEFAULT: '#071739',
+          light: '#4B6382',
         },
+
         background: {
-          DEFAULT: '#F8F6F3',   // основной фон страницы
-          card: '#FFFFFF',       // карточки, блоки
+          DEFAULT: '#F8F6F3',
+          card: '#FFFFFF',
         },
+
         accent: {
-          DEFAULT: '#A68868',    // кнопки, ссылки, акценты
-          light: '#E3C39D',      // светлый акцент, выделения
-        }
+          DEFAULT: '#A68868',
+          light: '#E3C39D',
+        },
       },
 
-    fontFamily: {
+
+      fontFamily: {
         heading: ['Playfair Display', 'serif'],
         body: ['Inter', 'sans-serif'],
-      }, 
+      },
+
+
+      animation: {
+        "arrow-down": "arrowDown 2s ease-in-out infinite",
+      },
+
+
+      keyframes: {
+        arrowDown: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+
+          "50%": {
+            transform: "translateY(8px)",
+          },
+        },
+      },
+
 
     },
   },
+
+
   plugins: [],
 }
