@@ -1,7 +1,14 @@
+import {
+  ShieldCheck,
+  Mail,
+  FileSearch,
+  Scale,
+} from "lucide-react"
+
 const citizenServices = [
 
   {
-    icon: "🛡️",
+    icon: ShieldCheck,
     title: "Защита прав потребителей",
 
     description:
@@ -18,7 +25,7 @@ const citizenServices = [
 
 
   {
-    icon: "✉️",
+    icon: Mail,
     title: "Жалобы и обращения в государственные органы",
 
     description:
@@ -35,7 +42,7 @@ const citizenServices = [
 
 
   {
-    icon: "📄",
+    icon: FileSearch,
     title: "Юридическая консультация и анализ документов",
 
     description:
@@ -52,7 +59,7 @@ const citizenServices = [
 
 
   {
-    icon: "⚖️",
+    icon: Scale,
     title: "Судебная защита",
 
     description:

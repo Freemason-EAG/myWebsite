@@ -2,6 +2,7 @@ import businessServices from "../data/businessServices"
 import WorkSteps from "../components/WorkSteps"
 import { Link } from "react-router-dom"
 import ContactLink from "../components/ContactLink"
+import Pricing from "../components/Pricing"
 
 
 const Business = () => {
@@ -108,14 +109,34 @@ const Business = () => {
   >
 
 
-              <div className="text-4xl mb-5">
+              <div className="
+  flex
+  h-12
+  w-12
+  items-center
+  justify-center
+  rounded-xl
+  bg-accent/10
+  text-accent
+  mb-5
+  mx-auto
+">
+  <service.icon
+    size={26}
+    strokeWidth={1.5}
+  />
+</div>
 
-                {service.icon}
 
-              </div>
-
-
-              <h2 className="text-xl font-semibold text-primary mb-3 group-hover:text-accent transition">
+              <h2 className="
+  text-xl
+  font-semibold
+  text-primary
+  mb-3
+  text-center
+  group-hover:text-accent
+  transition
+">
 
                 {service.title}
 
@@ -454,9 +475,14 @@ const Business = () => {
 
 
           </div>
+          </div>
+
+          {/* Стоимость */}
+
+<Pricing type="business" />
 
 
-        </div>
+        
 
         {/* CTA */}
 

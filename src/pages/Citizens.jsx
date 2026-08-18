@@ -1,6 +1,7 @@
 import citizenServices from "../data/citizenServices"
 import WorkSteps from "../components/WorkSteps"
 import ContactLink from "../components/ContactLink"
+import Pricing from "../components/Pricing"
 
 
 const Citizens = () => {
@@ -98,18 +99,34 @@ const Citizens = () => {
             >
 
 
-              <div className="text-4xl mb-5">
+              <div className="
+  flex
+  h-12
+  w-12
+  items-center
+  justify-center
+  rounded-xl
+  bg-accent/10
+  text-accent
+  mb-5
+  mx-auto
+">
+  <service.icon
+    size={26}
+    strokeWidth={1.5}
+  />
+</div>
 
-                {service.icon}
 
-              </div>
-
-
-              <h2 className="text-xl font-semibold text-primary mb-3">
-
-                {service.title}
-
-              </h2>
+              <h2 className="
+  text-xl
+  font-semibold
+  text-primary
+  mb-3
+  text-center
+">
+  {service.title}
+</h2>
 
 
               <p className="text-primary-light leading-relaxed mb-5">
@@ -518,6 +535,10 @@ const Citizens = () => {
 
 
         </div>
+
+        {/* Стоимость */}
+
+        <Pricing type="citizens" />
 
 
         {/* CTA */}

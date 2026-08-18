@@ -1,7 +1,15 @@
+import {
+  ClipboardCheck,
+  Landmark,
+  Gavel,
+  Leaf,
+  BriefcaseBusiness,
+} from "lucide-react"
+
 const businessServices = [
 
   {
-    icon: "🏥",
+    icon: ClipboardCheck,
     title: "Проверки Роспотребнадзора",
     link: "/business/rospotrebnadzor",
     slug: "rospotrebnadzor",
@@ -19,7 +27,7 @@ const businessServices = [
 
 
   {
-    icon: "🏛️",
+    icon: Landmark,
     title: "Проверки государственных органов",
     link: "/business/government-checks",
     slug: "government-checks",
@@ -37,7 +45,7 @@ const businessServices = [
 
 
   {
-    icon: "🚫",
+    icon: Gavel,
     title: "Штрафы и риск приостановления деятельности",
     link: "/business/fines",
     slug: "fines",
@@ -55,7 +63,7 @@ const businessServices = [
 
 
   {
-    icon: "🌿",
+    icon: Leaf,
     title: "Экологический контроль и природоохранное законодательство",
     link: "/business/ecology",
     slug: "ecology",
@@ -73,7 +81,7 @@ const businessServices = [
 
 
   {
-    icon: "📄",
+    icon: BriefcaseBusiness,
     title: "Юридическое сопровождение бизнеса",
     link: "/business/legal-support",
     slug: "legal-support",
