@@ -9,11 +9,13 @@ import Business from "./pages/Business"
 import Citizens from "./pages/Citizens"
 import FloatingContactButton from "./components/FloatingContactButton"
 import ServicePage from "./pages/ServicePage"
+import ScrollToTop from "./components/ScrollToTop"
 
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={
