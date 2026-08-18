@@ -1,6 +1,7 @@
 import businessServices from "../data/businessServices"
 import WorkSteps from "../components/WorkSteps"
 import { Link } from "react-router-dom"
+import ContactLink from "../components/ContactLink"
 
 
 const Business = () => {
@@ -477,24 +478,21 @@ const Business = () => {
           </p>
 
 
-          <a
-            href="#contact"
-            className="
-            inline-block
-            bg-accent
-            hover:bg-accent-light
-            text-white
-            px-8
-            py-4
-            rounded-lg
-            transition
-            text-lg
-            "
-          >
-
-            Получить консультацию
-
-          </a>
+          <ContactLink
+  className="
+    inline-block
+    bg-accent
+    hover:bg-accent-light
+    text-white
+    px-8
+    py-4
+    rounded-lg
+    transition
+    text-lg
+  "
+>
+  Получить консультацию
+</ContactLink>
 
 
         </div>

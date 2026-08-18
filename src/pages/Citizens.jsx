@@ -1,5 +1,6 @@
 import citizenServices from "../data/citizenServices"
 import WorkSteps from "../components/WorkSteps"
+import ContactLink from "../components/ContactLink"
 
 
 const Citizens = () => {
@@ -540,24 +541,21 @@ const Citizens = () => {
 
 
 
-          <a
-            href="#contact"
-            className="
-            inline-block
-            bg-accent
-            hover:bg-accent-light
-            text-white
-            px-8
-            py-4
-            rounded-lg
-            transition
-            text-lg
-            "
-          >
-
-            Получить консультацию
-
-          </a>
+          <ContactLink
+  className="
+    inline-block
+    bg-accent
+    hover:bg-accent-light
+    text-white
+    px-8
+    py-4
+    rounded-lg
+    transition
+    text-lg
+  "
+>
+  Получить консультацию
+</ContactLink>
 
 
         </div>

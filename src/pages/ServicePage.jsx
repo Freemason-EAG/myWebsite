@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import servicePagesData from "../data/servicePagesData"
+import ContactLink from "../components/ContactLink"
 
 
 const ServicePage = () => {
@@ -399,24 +400,21 @@ const ServicePage = () => {
 
 
 
-          <a
-            href="#contact"
-            className="
-            inline-block
-            bg-accent
-            hover:bg-accent-light
-            text-white
-            px-8
-            py-4
-            rounded-lg
-            transition
-            text-lg
-            "
-          >
-
-            Получить консультацию
-
-          </a>
+          <ContactLink
+  className="
+    inline-block
+    bg-accent
+    hover:bg-accent-light
+    text-white
+    px-8
+    py-4
+    rounded-lg
+    transition
+    text-lg
+  "
+>
+  Получить консультацию
+</ContactLink>
 
 
 
