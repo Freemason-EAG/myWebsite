@@ -81,113 +81,150 @@ const Business = () => {
 
         {/* Услуги */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+{/* Услуги */}
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+  {businessServices.map((service, index) => (
+
+    <div
+      key={index}
+      className="
+        group
+        flex
+        flex-col
+        bg-background-card
+        rounded-2xl
+        shadow-sm
+        p-7
+        border border-black/5
+        hover:shadow-xl
+        hover:-translate-y-1
+        transition-all
+        duration-300
+      "
+    >
+
+      {/* Иконка */}
+
+      <div className="
+        flex
+        h-12
+        w-12
+        items-center
+        justify-center
+        rounded-xl
+        bg-accent/10
+        text-accent
+        mb-5
+        mx-auto
+      ">
+
+        <service.icon
+          size={26}
+          strokeWidth={1.5}
+        />
+
+      </div>
 
 
-        {businessServices.map((service,index)=>(
+      {/* Заголовок */}
+
+      <h2 className="
+        text-xl
+        font-semibold
+        text-primary
+        mb-3
+        text-center
+        group-hover:text-accent
+        transition
+      ">
+
+        {service.title}
+
+      </h2>
 
 
-          <Link
+      {/* Описание */}
 
-            key={index}
+      <p className="
+        text-primary-light
+        leading-relaxed
+        mb-5
+      ">
 
-            to={service.link}
+        {service.description}
 
+      </p>
+
+
+      {/* Детали */}
+
+      <ul className="space-y-3 mb-6">
+
+        {service.details.map((item, i) => (
+
+          <li
+            key={i}
             className="
-              group
-              block
-              bg-background-card 
-              rounded-2xl 
-              shadow-sm 
-              p-7
-              border border-black/5
-              hover:shadow-xl
-              hover:-translate-y-1
-              transition-all
-              duration-300
+              flex
+              gap-2
+              text-sm
+              text-primary-light
             "
-  >
+          >
+
+            <span className="text-accent">
+              ●
+            </span>
+
+            <span>
+              {item}
+            </span>
+
+          </li>
+
+        ))}
+
+      </ul>
 
 
-              <div className="
-  flex
-  h-12
-  w-12
-  items-center
-  justify-center
-  rounded-xl
-  bg-accent/10
-  text-accent
-  mb-5
-  mx-auto
-">
-  <service.icon
-    size={26}
-    strokeWidth={1.5}
-  />
+      {/* Подробнее */}
+
+      <Link
+        to={service.link}
+        className="
+          inline-flex
+          items-center
+          gap-2
+          text-accent
+          font-semibold
+          mt-auto
+          pt-2
+          group/link
+          hover:text-accent-light
+          transition
+        "
+      >
+
+        Подробнее
+
+        <span className="
+          transition-transform
+          duration-300
+          group-hover/link:translate-x-1
+        ">
+          →
+        </span>
+
+      </Link>
+
+
+    </div>
+
+  ))}
+
 </div>
-
-
-              <h2 className="
-  text-xl
-  font-semibold
-  text-primary
-  mb-3
-  text-center
-  group-hover:text-accent
-  transition
-">
-
-                {service.title}
-
-              </h2>
-
-
-              <p className="text-primary-light leading-relaxed mb-5">
-
-                {service.description}
-
-              </p>
-
-
-
-              <ul className="space-y-3">
-
-
-                {service.details.map((item,i)=>(
-
-
-                  <li
-                    key={i}
-                    className="flex gap-2 text-sm text-primary-light"
-                  >
-
-                    <span className="text-accent">
-                      ●
-                    </span>
-
-
-                    <span>
-                      {item}
-                    </span>
-
-
-                  </li>
-
-
-                ))}
-
-
-              </ul>
-
-
-            </Link>
-
-
-          ))}
-
-
-        </div>
 
           {/* Этапы работы */}
 

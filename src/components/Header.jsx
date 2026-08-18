@@ -21,12 +21,34 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
 
         {/* Логотип */}
-        <Link
-          to="/"
-          className="text-2xl font-bold text-white font-heading hover:text-accent-light transition"
-        >
-          Юрист Егоян А.Г.
-        </Link>
+<Link
+  to="/"
+  className="
+    flex
+    items-center
+    gap-3
+    text-white
+    font-heading
+    hover:text-accent-light
+    transition
+  "
+>
+  <img
+    src="/favicon.png"
+    alt="EA"
+    className="w-20 h-20 rounded-lg"
+  />
+
+  <div className="flex flex-col leading-tight">
+    <span className="text-2xl md:text-3xl font-bold">
+      Егоян А.Г.
+    </span>
+
+    <span className="text-sm md:text-base text-accent-light mt-1">
+      Юридическая помощь
+    </span>
+  </div>
+</Link>
 
 
         {/* Десктопное меню */}
